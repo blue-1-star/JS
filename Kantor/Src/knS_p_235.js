@@ -13,7 +13,9 @@ function ucFirst(str) {
 }
 
 function truncate(str,maxlength) {
-    return(str.slice(0,maxlength) + "...");
+	let ad = "";
+	if ( str.length > maxlength ) ad = "...";
+    return(str.slice(0,maxlength) + ad);
 }
 
 function find(arr,value) {
@@ -27,8 +29,11 @@ function find(arr,value) {
     return(pos);
 }
 
- alert( ucFirst("fyzi") );
-//alert(truncate('Вот, что мне хотелось бы сказать на эту тему:', 20));
+// alert( ucFirst("fyzi") );
+let lStr = "Simple string";
+alert(truncate('Вот, что мне хотелось бы сказать на эту тему:', 20));
+alert(truncate(lStr,20));
+
 // arr = ["test", 2, 1.5, false];
 // alert( find(arr, "test") ); // 0
 // alert( find(arr, 2) ); // 1
